@@ -1,0 +1,129 @@
+/*
+ Theme Name:   Awesome
+ Theme URI:    http://www.geeksareforlife.com/
+ Description:  A child theme of Twenty Fourteen
+ Author:       James Hayward
+ Author URI:   http://www.geeksareforlife.com/
+ Template:     twentyfourteen
+ Version:      1.0.0
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  awesome
+*/
+
+@import url("../twentyfourteen/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+/* centre the site */
+.site {
+	margin: 0 auto;
+}
+
+/* Make room for the search toggle and site description in mobile sidebar */
+#slideout-top {
+	height:48px;
+}
+
+#slideout-top .site-description {
+	display: block;
+	text-align: left;
+	font-family: lato;
+	width: 205px;
+	overflow: hidden;
+}
+
+#slideout-top .search-toggle {
+	margin-right: 0;
+}
+
+/* Override Sidr Style For 2014 Search */
+#slideout-top .search-box .search-field {
+	background-color: white;
+	color: black;
+}
+
+/* Keep mobile toggle on the right and resize the genricon */
+#menu-toggle {
+	float: right;
+	display: inline;
+}
+
+#menu-toggle .genericon {
+	font-size: 48px;
+	padding: 0 1em 0 0;
+	z-index: 999;
+}
+
+/* enhancing the topbar */
+#big-top {
+	display: block;
+}
+
+#masthead {
+	height: 88px;
+	position: fixed;
+	top: 0;
+}
+
+.header-main {
+	display: inline;
+}
+
+.site-title{
+	margin: 0 0 0 20px;
+}
+
+nav#primary-navigation {
+	width: 100%;
+	display: block;
+	top: 40px;
+	left: 0px;
+	position: absolute;
+	padding-left: 30px;
+}
+
+.topbar-description {
+	color: #fff;
+	display: inline;
+	font-weight: bold;
+	font-size: 100%;
+	text-transform: lowercase;
+	line-height: 50px;
+	vertical-align: baseline;
+	margin-left: 20px;
+	font-style: italic;
+}
+
+/**Adjustments for the desktop topbar when screen is small**/
+@media screen and (max-width: 768px) {
+	.search-toggle {
+		position: absolute;
+		top: -8px;
+		right: 0px;
+	}
+
+	#masthead {
+		height: 60px;
+	}
+
+	.topbar-menu {
+		display: block;
+		background-color: black;
+	}
+	
+	.primary-navigation.toggled-on {
+		display: block;
+		padding: 48px 0 0 0px;
+		background-color: black;
+	}
+	
+	.nav-toggled {
+		padding-top: 48px !important;
+		padding-left: 0px !important;
+	}
+	
+	h2.topbar-description {
+		display:none;
+	}
+}
